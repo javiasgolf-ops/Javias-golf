@@ -8,26 +8,29 @@
     body { font-family: Arial, sans-serif; text-align: center; background: #f0f4f8; }
     h1 { color: #2c3e50; }
     .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    video { width: 300px; border: 2px solid #2c3e50; border-radius: 8px; }
+    iframe, video { width: 300px; border-radius: 8px; border: 2px solid #2c3e50; }
   </style>
 </head>
 <body>
   <h1>Golf Swing Sample Videos</h1>
-  <p>Select a swing to view and compare with your own.</p>
+  <p>Watch pro swings or compare with your own.</p>
 
   <div class="gallery">
+    <!-- YouTube Short embed -->
+    <iframe width="300" height="533"
+      src="https://www.youtube.com/embed/abc123XYZ"
+      title="Tiger Woods Short"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <!-- Local MP4 hosted on Netlify -->
     <video controls>
       <source src="samples/pro-swing.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
-    <video controls>
-      <source src="samples/driver-example.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
-    <video controls>
-      <source src="samples/iron-example.mp4" type="video/mp4">
       Your browser does not support video.
     </video>
   </div>
 </body>
 </html>
+
